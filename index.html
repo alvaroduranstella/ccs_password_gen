@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caracas WS Password Generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="icons/css/all.min.css">
+  </head>
+
+  <body>
+    <!--logo image-->
+    <div class = "container"> 
+      <div class = "logo">
+        <img src="img/logo.jpg" alt="">
+      </div>
+
+      <div class="title">
+        <h1>PASSWORD GENERATOR</h1>
+      </div>
+     
+                  <!--App code-->
+                  <!--Form for criteria buttons-->
+      <form action="" class = "app" id="app">
+        <div class="row password-lenght">
+          <div class="line"> 
+            <label for="password-lenght">Password lenght:</label>
+          </div>
+          <div class="line buttons">
+            <!--Minus Button-->
+            <div>
+              <button class="btn" id="btn-one-minus"><i class="fas fa-minus"></i></button>
+            </div>
+            <!--Password lenght box-->
+            <div>
+              <input type="text" id="password-lenght" readonly value = "12">
+            </div>
+            <!--Plus Button-->
+            <div>
+              <button class="btn" id="btn-one-plus"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row symbols">
+            <div class="line">
+                <label for="symbols">Include symbols?</label>
+            </div>
+            <!--Check button for symbols-->
+            <div class="row">
+                <button class="btn" id="btn-symbols"><i class="fas fa-check"></i></button>
+            </div>
+        </div>
+
+        <div class="row numbers">
+            <div class="line">
+                <label for="numbers">Include numbers?</label>
+            </div>
+            <!--Check button for numbers-->
+            <div class="row">
+                <button class="btn" id="btn-numbers"><i class="fas fa-check"></i></button>
+            </div>
+        </div>
+
+        <div class="row uppercase">
+            <div class="line">
+                <label for="uppercase">Include uppercase?</label>
+            </div>
+            <!--Check button for uppercase letters-->
+            <div class="row">
+                <button class="btn" id="btn-uppercase"><i class="fas fa-check"></i></button>
+            </div>
+        </div>
+
+        <div class="row generate">
+            <!--Generator button-->
+            <div class="line">
+               <button class="btn btn-generate" id="btn-generate">Generate Password <i class="fas fa-lock"></i></button> 
+            </div>
+            <div class="line">
+                <!--Input for Password-->
+                <input type="text" class="input-password" id="input-password" readonly>
+            </div>
+        </div>
+
+        <div class="row message">
+            <div class="line"></div>
+                <div class="message-copied" id="message-copied">
+                    <p><i class="fas fa-copy"></i>Password Copied</p>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    <!--</div>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>-->
+    <script src="js/script.js"></script>
+  </body>
+</html>

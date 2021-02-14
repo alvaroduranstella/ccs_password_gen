@@ -1,0 +1,389 @@
+/*--------------------------------*/
+/* MAIN STYLES /*
+/*--------------------------------*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+*::selection {
+    background: #3d3561;
+    color:#fff;
+}
+
+body {
+    background: #060629;
+    color: #fff;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+/*--------------------------------*/
+/* LOGO STYLES /*
+/*--------------------------------*/
+
+.logo {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.logo img {
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+}
+
+/*--------------------------------*/
+/* TITLE STYLES /*
+/*--------------------------------*/
+.title {
+    text-align: center;
+}
+
+/*--------------------------------*/
+/* ROW AND LINE STYLES /*
+/*--------------------------------*/
+.app .row {
+    margin-bottom: 40px;
+    /*Flexbox to avoid use float*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .line {
+    width: 50%;  
+}
+
+/*--------------------------------*/
+/* INPUT AND BUTTONS STYLES /*
+/*--------------------------------*/
+.app label {
+    line-height: 40px;
+}
+
+.app input {
+    text-align: center;
+    border: none;
+}
+
+.app .btn {
+    width: 100%;
+    background: #2103a7;
+    color:#fff;
+    display: inline-block; 
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .btn:hover {
+    background: #6299e2;
+}
+
+.app .btn.false {
+    background: #10014e;
+}
+
+/*--------------------------------*/
+/* ROW: LENGHT OF CHARACTERS /*
+/*--------------------------------*/
+.app .password-lenght .buttons div {
+    width: 100%;
+}
+
+.app .password-lenght .buttons div:nth-child(1) button {
+    border-radius: 4px 0 0 4px;
+}
+
+.app .password-lenght input {
+    height: 40px;
+    width: 100%;
+    cursor: default;
+    background: #10014e;
+    color: #fff;
+}
+
+.app .password-lenght .buttons div:nth-child(3) button {
+    border-radius: 0 4px 4px 0;
+}
+
+.app .password-lenght .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*--------------------------------*/
+/* ROW: GENERATE A PASSWORD /*
+/*--------------------------------*/
+.app .row.generate {
+    margin-bottom: 10px;
+}
+
+.app .row.generate .line:nth-child(1) {
+    width: 40%;
+}
+
+.app .row.generate .line:nth-child(2) {
+    width: 55%;
+}
+
+.app .row.generate .btn.btn-generate {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 0;
+    line-height: 40px;
+    position: relative;
+}
+
+
+.app .row.generate .btn.btn-generate:after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #2103a7;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 13px;
+    right: -7px;
+    transition: all .3s ease;
+}
+
+.app .row.generate .line:nth-child(1):hover .btn.btn-generate::after {
+    background: #6299e2;
+}
+
+.app .row.generate .input-password {
+   width: 100%;
+   background: none;
+   border-radius: 4px;
+   border: 1px solid rgba(255,255,255,.25);
+   color: #fff;
+   height: 40px;
+   line-height: 40px;
+   cursor: pointer;
+   transition: all .3s ease;
+}
+
+.app .row.generate .input-password:hover {
+    border: 1px solid rgba(255,255,255,.65);
+}
+
+.app .row.generate input:selection {
+    background: #060629;
+}
+
+/*--------------------------------*/
+/* ROW: MESSAGE /*
+/*--------------------------------*/
+.app .row.message {
+    justify-content: flex-end;
+}
+
+.app .row.message .message-copied {
+    width: 65%;
+}
+
+.app .row.message .message-copied {
+    text-align: center;
+    color: rgba(255,255,255,0);
+    transition: all .3s ease;
+}
+
+.app .row.message .message-copied.active  {
+     color: rgba(255,255,255,1);
+}
+
+.app .row.message .message-copied p,
+.app .row.message .message-copied i {
+    font-size: 12px;
+}
+
+/*--------------------------------*/
+/* MEDIA QUERIES /*
+/*--------------------------------*/
+@media screen and (max-width: 500px) {
+    .logo img {
+        width: 70%;
+}
+
+.app .row {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.app .row .line {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.app .row.generate {
+    border-top: 1px solid rgba(255,255,255,.45);
+    padding-top: 40px;
+}
+
+.app .row.generate .file:nth-child(1),
+.app .row.generate .file:nth-child(2) {
+    width: 100%;
+}
+
+.app .row.generate .btn.btn-generate:after {
+    top:auto;
+    left: 50%;
+    right: 50%;
+    bottom: -7px;
+}
+
+/**,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+.float-right {
+  float: right;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
